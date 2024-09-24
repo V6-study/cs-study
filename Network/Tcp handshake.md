@@ -25,9 +25,8 @@
 ### **3 way handshake - 연결 성립**
 
 > TCP는 정확한 전송을 보장해야 한다. 따라서 통신하기에 앞서, 논리적인 접속을 성립하기 위해 3 way handshake 과정을 진행한다.
-> 
 
-![Untitled - 3-way handshake.jpg](Untitled_-_3-way_handshake.jpg)
+![Untitled_-_3-way_handshake](https://github.com/user-attachments/assets/dcb8cfb6-bade-41d1-ae1f-b06374cf016e)
 
 1. 클라이언트가 서버에게 SYN 패킷을 보냄 (sequence : x)
 2. 서버가 SYN(x)을 받고, 클라이언트로 받았다는 신호인 ACK와 SYN 패킷을 보냄 (sequence : y, ACK : x + 1)
@@ -38,9 +37,8 @@
 ### **4 way handshake - 연결 해제**
 
 > 연결 성립 후, 모든 통신이 끝났다면 해제해야 한다.
-> 
 
-![Untitled - 4-way handshake (1).jpg](Untitled_-_4-way_handshake_(1).jpg)
+![Untitled_-_4-way_handshake_(1)](https://github.com/user-attachments/assets/5dff8da7-dfac-498f-8f46-db7a4f2a6c6e)
 
 1. 클라이언트는 서버에게 연결을 종료한다는 FIN 플래그를 보낸다.
 2. 서버는 FIN을 받고, 확인했다는 ACK를 클라이언트에게 보낸다. 
