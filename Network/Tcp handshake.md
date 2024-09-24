@@ -65,3 +65,12 @@
     - TIME_WAIT 시간이 끝나면 클라이언트도 닫는다
 
 이렇게 4번의 통신이 완료되면 연결이 해제된다.  
+
+
+[참고자료]
+
+[🔗](https://www.youtube.com/watch?v=Ah4-MWISel8) [따라學IT] 09. 연결지향형 TCP 프로토콜 - TCP 3Way Handshake
+
+[🔗](https://mindnet.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%89%BD%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-22%ED%8E%B8-TCP-3-WayHandshake-4-WayHandshake) [ 네트워크 쉽게 이해하기 22편 ] TCP 3 Way-Handshake & 4 Way-Handshake
+
+[🔗](https://www.youtube.com/watch?v=K9L9YZhEjC0) 이해하면 인생이 바뀌는 TCP 송/수신 원리
