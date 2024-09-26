@@ -20,30 +20,30 @@
 
 발신자가 수신자의 처리 능력에 맞춰 데이터 전송 속도를 조절하는 것이다. 발신자와 수신자 두 노드 간 개념이라고 생각하면 된다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9887a34e-d6f9-43f1-a7b8-f3f3bef7edf3/5ea36ecd-f2f8-417e-bcfe-43286e81cfdb/image.png)
+![img](https://github.com/user-attachments/assets/cceecd8b-183b-43cd-a014-94d1791087e2)
 
 1. send buffer, receive buffer
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9887a34e-d6f9-43f1-a7b8-f3f3bef7edf3/0b5c70ec-f854-4df1-835b-ffa45122c5aa/image.png)
+    ![img](https://github.com/user-attachments/assets/dd0c3a44-f5db-40e1-b3af-8a7b3b8222dc)
     
     - TCP는 보낼 데이터는 send buffer에, 받은 데이터는 receive buffer에 저장한다.
     - Application이 준비됐을때 receive buffer로부터 데이터를 읽는다.
     - 따라서 흐름제어는 receive buffer가 받지 못할만큼의 데이터를 전송하지 않도록 데이터 흐름을 관리하는 것이다.
 2. Receive Window
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9887a34e-d6f9-43f1-a7b8-f3f3bef7edf3/b31dd3e9-9aba-4e3e-992b-991cea399817/image.png)
+    ![img](https://github.com/user-attachments/assets/fa58f574-0cb9-402b-a1eb-bb599f1b7fe5)
     
     - 이때, 수신자가 receive buffer에 남은 자리를 Receive Window라는 개념으로 관리한다.
     - 그래서 TCP는 패킷을 전송 받을 때마다, 이 정보를 ack 메세지에 담아 발신자에게 보낸다.
     - Stop and Wait: 이를 응용한 것으로, 매번 전송한 패킷에 대한 확인 응답을 받아야 그 다음 패킷을 전송할 수 있는 방식이다.
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9887a34e-d6f9-43f1-a7b8-f3f3bef7edf3/73935332-a70f-4243-a17f-0946a5a573ad/image.png)
+        ![img](https://github.com/user-attachments/assets/2c344d99-1be7-493a-8f40-0802fff47538)
         
         - 오버플로우가 일어날 가능성은 없지만, 너무 느리다는 단점이 있다. 당연히 요즘에는 잘 사용하지 않는다.
 3. Sliding Window
     - 하나를 보내고 기다리는게 아니라, 여러개를 동시에 보낼 수 있는 TCP 프로토콜이다. 이때 동시에 보낼 수 있는 사이즈가 정해져 있고, 이를 윈도우라고 한다.
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9887a34e-d6f9-43f1-a7b8-f3f3bef7edf3/216ee68e-15c8-46fa-a6a3-cc0631997f47/image.png)
+        ![img](https://github.com/user-attachments/assets/c4582ac1-d27f-41fd-bad2-c3eed14f920a)
         
         - e.g. 위 그림은 윈도우 사이즈가 7이며, 7개 이하 데이터를 한번에 보낼 수 있는 경우이다.
         - 0, 1을 보내면 윈도우 사이즈가 줄어든 것을 알 수 있다.
@@ -51,7 +51,7 @@
         - 만약 윈도우 사이즈가 0이 되면, TCP는 데이터 전송을 멈추고 persist timer를 시작한다. 타이머가 시작되고 WindowProbe라는 작은 패킷을 계속 전송한다. receiver가 윈도우 사이즈에 여유가 생겼음을 알릴 수 있도록.
         - $LastByteSent - LastByteAcked ≤ ReceiveWindowAdvertised$
             
-            ![1_KvfIrP_Iwq40uVdRZYGnQg.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9887a34e-d6f9-43f1-a7b8-f3f3bef7edf3/17b78609-7240-4736-aea7-d5f4ff0a82b9/1_KvfIrP_Iwq40uVdRZYGnQg.png)
+            ![img](https://github.com/user-attachments/assets/560550c2-d85b-4110-8349-d7ad26bd9414)
             
     - ACK 메세지도 데이터와 마찬가지로 한꺼번에 처리된다. (e.g. 데이터 3, 4, 5마다 ACK 4, 5, 6을 보내는 것이 아니라 6만 보낸다)
     - 데이터와 ACK는 모두 양방향으로 전송되어야 한다.
@@ -67,13 +67,13 @@
 
 1. 혼잡 윈도우(Congestion Window)
     
-    ![img1.daumcdn.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9887a34e-d6f9-43f1-a7b8-f3f3bef7edf3/7daf3008-76f7-4e0c-a648-af84cbbbeb97/img1.daumcdn.png)
+    ![img](https://github.com/user-attachments/assets/9da23920-2963-40f0-bf1b-8235db0a3fb0)
     
     - 발신자는 자신의 윈도우 크기를 정할때, 수신자가 보내준 rwnd 와 자신이 네트워크 상황을 고려해 정한 cwnd 중 더 작은 값을 택한다.
     - 마찬가지로 Sliding Window 방식을 사용한다.
 2. 느린 시작 Slow Start
     
-    ![img1.daumcdn.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9887a34e-d6f9-43f1-a7b8-f3f3bef7edf3/f99d8901-69c2-4025-9f87-ea030e5e4f13/img1.daumcdn.png)
+    ![img](https://github.com/user-attachments/assets/101bc79e-a0d9-4024-a85b-30e8f0e6c690)
     
     - $cwnd = 1$
     - For each ACK, $cwnd ← cwnd + 1 [packets]$
@@ -86,7 +86,7 @@
     - 이후 slow start를 다시 수행하는데, cwnd 값이 ssthresh 값보다 커지면 네트워크 용량에 도달했다고 판단하고 slow start를 종료, congestion avoidance 단계로 넘어간다.
 3. Congestion Avoidance (aka AIMD)
     
-    ![img1.daumcdn.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9887a34e-d6f9-43f1-a7b8-f3f3bef7edf3/fe68933a-5a4f-4567-ad38-68df85b1ccca/img1.daumcdn.png)
+    ![img](https://github.com/user-attachments/assets/f44ecdab-53f5-4396-a55e-6374ac4cc55f)
     
     - ACK을 수신하면 cwnd를 1/cwnd 씩 늘린다. 따라서 전송된 모든 패킷의 ACK를 수신하면, cwnd는 RTT마다 1씩 선형적으로 증가한다.
     - 패킷 드랍이 일어나는 경우
