@@ -9,13 +9,15 @@
 
 ### 독립적인 데이터 전송 단위를 의미하는 용어로, 네트워크에서 전송되는 하나의 패킷을 가르킴.
 #### 데이터그램 패킷 교환 방식
-![img_1.png](img_1.png)
+![화면 캡처 2024-09-26 025318](https://github.com/user-attachments/assets/3a3b3a9c-33e6-4769-897d-598feadca5fd)
 
 #### (3,2,1) 하나 하나가 데이터그램으로 보면 됩니다.
 #### UDP는 데이터그램 패킷 교환 방식을 사용하는 프로토콜.
 
 # UDP (User Datagram Protocol)와 TCP의 차이점
-![img_2.png](img_2.png)
+![화면 캡처 2024-09-26 025359](https://github.com/user-attachments/assets/bbf36fd8-a797-44c0-a3ea-c3a5eac61f18)
+
+
 - ### 브로드캐스트 
   - #### 하나의 송신자가 같은 네트워크 내의 모든 장치에 데이터를 전송하는 방식
 - ### UDP와 TCP 헤더 비교
