@@ -127,3 +127,8 @@
 
 3. 목적
     - 일관적인 convention을 통한 API 이해도 및 호환성 향상
+
+<br>
+
+[참고자료]<br>
+[🔗](https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html) REST-API란 REST,RESTful이란
