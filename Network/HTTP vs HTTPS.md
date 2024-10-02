@@ -74,11 +74,12 @@ RTT 감소를 위해 이미지 스프라이트(image sprite), 코드 압축, bas
 -   특징
     -   2020년 등장하였으며, TCP 위에서 돌아가는 이전 버전과 달리 HTTP3는 **QUIC이라는 계층** 위에서 돌아가며, TCP 기반이 아닌 **UDP 기반**으로 돌아간다.
     -   http/3.0에서는 **무조건 https를 사용**한다. (네이버는 HTTP3와 HTTP2를 혼용하여 컨텐츠를 서빙하며, 구글은 HTTP3로만 서빙)
-    -   HTTP/2.0 에서 장점이었던 멀티플렉싱을 가지고 있으며, "**초기 연결 설정 시 지연 시간 감소"**라는 대표적 특성이 있음.
+    -   HTTP/2.0 에서 장점이었던 멀티플렉싱을 가지고 있으며, "**초기 연결 설정 시 지연 시간 감소**"라는 대표적 특성이 있음.
+    
 
 <br/><br/>
 ### QUIC
-
+![image](https://github.com/user-attachments/assets/c341e3a5-5796-4ff7-98c8-39380b050bd4)
 -   HTTP/2.0의 경우 3-RTT가 필요했다면 QUIC은 1-RTT만 필요.
     -   HTTP/2.0 : TCP handshake (1 RTT) + TLS handshake(1~2 RTT)
     -   QUIC : TCP handshake와 TLS handshake를 하나의 단계로 통합 TLS로 암호화통신을 구축할 때의 **단 한번의 handshake**를 활용해 클라이언트와 **서버간의 연결,암호화 통신 모두 다 구축**.
