@@ -4,7 +4,7 @@
 - FCFS, SJF, 우선순위
 
 
-#### FCFS
+#### FCFS (First Come First Serve)
 - 가장 단순한 스케줄링 방식
 - 먼저 도착한 프로세스가 CPU를 먼저 사용
 - 장점: 구현이 간단
