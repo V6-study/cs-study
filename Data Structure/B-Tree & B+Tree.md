@@ -2,7 +2,7 @@
 
 - B-Tree는 탐색 성능을 높이기 위해 균형 있게 높이를 유지하는 Balanced Tree의 일종
 - 자식 node의 개수가 2개 이상
-- node 내의 key가 1개 이상일 수 있음
+- node 내의 key가 1개 이상일 수 있음 
 
 ### 1.1 B-Tree 조건
 
