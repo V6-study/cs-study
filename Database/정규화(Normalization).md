@@ -123,3 +123,4 @@
 #### [참고 사항]
 
 - [링크](https://wkdtjsgur100.github.io/database-normalization/)
+- [출처](https://github.com/gyoogle/tech-interview-for-developer/blob/master/Computer%20Science/Database/%EC%A0%95%EA%B7%9C%ED%99%94(Normalization).md)
