@@ -39,3 +39,12 @@ String 클래스
     StringBuilder 클래스
     - 문자열 연산이 많은 Single-Thread 또는 Thread 신경 안쓰는 환경
     ```
+
+### **Conclusion**
+
+- String Class는 JDK 1.5버전 이전에 문자열연산('+', concat)을 할 때에는 조합된 문자열을 새로운 메모리에 할당하여 참조함으로 인해서 성능상의 이슈 존재
+- 그러나 JDK1.5 버전 이후에는 컴파일 단계에서 String 객체를 사용하더라도 StringBuilder로 컴파일 되도록 변경 → 성능상 이슈 해결
+- 하지만 반복 루프에서 String Class 사용시, 문자열을 더할 때에는 객체를 계속 추가하기 때문에 성능상 이슈 여전히 존재
+- String Class를 쓰는 대신 권장하는 방법
+    - Thread와 관련이 있으면 StringBuffer 사용
+    - Thread 안전 여부와 상관이 없으면 StringBuilder를 사용
