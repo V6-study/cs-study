@@ -37,9 +37,9 @@ SELECT * FROM employee NATURAL JOIN department;
 #### 1-3. CROSS JOIN (교차 조인)
 - 조인되는 두 테이블에서 곱집합을 반환한다.
 - 예를 들어, m행을 가진 테이블과 n행을 가진 테이블이 교차 조인되면 m*n 개의 행을 생성한다.
-<img src="https://github.com/user-attachments/assets/90aad3e7-44e4-428d-b0ed-872b46ea1a42"/>
+<img src="https://github.com/user-attachments/assets/90aad3e7-44e4-428d-b0ed-872b46ea1a42"/> <br>
 <br>
-<br>
+
 ### 2. OUTER JOIN (외부 조인)
 특정 테이블의 데이터가 모두 필요한 상황에서 활용한다.
 
