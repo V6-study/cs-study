@@ -14,8 +14,9 @@
 <br>
 
 ### 1. INNER JOIN (내부 조인)
-<img src="https://github.com/user-attachments/assets/6e3959e6-4802-475a-9e96-0115f314dc9f"/>
+<img src="https://github.com/user-attachments/assets/6e3959e6-4802-475a-9e96-0115f314dc9f"/> <br>
 교집합을 나타내는 조인 방식
+
 ```sql
 SELECT *
 FROM employee INNER JOIN department
@@ -43,7 +44,7 @@ SELECT * FROM employee NATURAL JOIN department;
 특정 테이블의 데이터가 모두 필요한 상황에서 활용한다.
 
 #### 2-1. LEFT OUTER JOIN
-<img src="https://github.com/user-attachments/assets/561df5f1-70d4-41c4-b860-f277c75cb8de"/>
+<img src="https://github.com/user-attachments/assets/561df5f1-70d4-41c4-b860-f277c75cb8de"/> <br>
 기준 테이블 값과 조인 테이블 값의 중복된 값을 보여준다.
 
 ```sql
@@ -53,7 +54,7 @@ ON employee.DepartmentID = department.DepartmentID;
 ```
 
 #### 2-2. RIGHT OUTER JOIN
-<img src = "https://github.com/user-attachments/assets/c2b47326-2ed7-4950-8bc1-2e61528a2f59"/>
+<img src = "https://github.com/user-attachments/assets/c2b47326-2ed7-4950-8bc1-2e61528a2f59"/> <br>
 LEFT OUTER JOIN과 반대로 오른쪽 테이블 기준으로 JOIN한다.
 ```sql
 SELECT *
@@ -62,7 +63,7 @@ ON employee.DepartmentID = department.DepartmentID;
 ```
 
 #### 2-3. FULL OUTER JOIN
-<img src="https://github.com/user-attachments/assets/6f8f229c-63f5-44cf-afe7-993324eaac7e"/>
+<img src="https://github.com/user-attachments/assets/6f8f229c-63f5-44cf-afe7-993324eaac7e"/> <br>
 합집합을 말한다. 양쪽 테이블의 모든 데이터가 검색된다.
 ```sql
 SELECT *
