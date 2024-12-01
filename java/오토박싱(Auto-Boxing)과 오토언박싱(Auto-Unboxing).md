@@ -37,7 +37,8 @@
     int i = num.intValue();
     ```
     
-    https://camo.githubusercontent.com/c049004bacaf2b26f86c5ab5e948e299bde94c820a98ed2e3dff80c7bb8d8d4d/687474703a2f2f7463707363686f6f6c2e636f6d2f6c656374757265732f696d675f6a6176615f626f78696e675f756e626f78696e672e706e67
+    ![image](https://github.com/user-attachments/assets/be225ccb-0c25-4be8-ba77-bd8bafdd9267)
+
     
 
 ## **2 오토 박싱 & 오토 언박싱**
