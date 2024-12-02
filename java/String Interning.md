@@ -1,6 +1,9 @@
 ## String Interning
 
+<br>
+
 String Interning은 Java의 String Pool(또는 String Constant Pool)과 관련된 메모리 최적화 메커니즘이다.
+
 <br>
 
 #### 1. String Pool이란
@@ -24,6 +27,8 @@ System.out.println(str1 == str3.intern());  // true
 - String str1을 생성할 때 'hello'는 리터럴 문자열이므 Heap 영역의 String Pool에 위치하게 됨
 - str2가 가르키는 'hello'를 String Pool에 넣으려고 보니 이미 존재함. 고로 str2는 str1과 같은 String Pool의 'hello'를 가르키게 됨.
 - new 연산자로 생성한 String str3는 일반 힙 메모리에 저장
+
+<br>
 
 > intern()의 사용?
 - 문자열 비교에는 equals()을 흔히 사용함. 그러나 == 연산자를 사용해야 할 때가 있음. 그럴 때 사용하는 것이 intern()
