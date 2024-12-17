@@ -1,4 +1,4 @@
-### **Test Code****의 중요성**
+### **Test Code**의 중요성
 
 -   개발 초기에 문제를 발견할 수 있음.
 -   코드 리팩토링 시 기존 기능을 검증을 통해 리팩토링 안정성을 보장.
@@ -126,6 +126,6 @@ public class MyControllerTest {
 \* \`@SpringBootTest\`  
 Spring Boot 애플리케이션 컨텍스트를 로드한다. 전체 애플리케이션을 시작하고 모든 빈을 로드한다.
 
-\* \`@AutoConfigureMocMvc\`
+\* \`@AutoConfigureMocMvc\`
 
 MockMvc를 자동으로 구성하여 테스트에서 사용할 수 있게 한다.
